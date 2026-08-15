@@ -2,7 +2,6 @@ import { CalendarIcon, FileTextIcon } from "@radix-ui/react-icons"
 import { BellIcon, Share2Icon } from "lucide-react"
 
 import { cn } from "@/lib/utils"
-import { Calendar } from "@/components/ui/calendar"
 import AnimatedBeamMultipleOutputDemo from "@/registry/example/animated-beam-multiple-outputs"
 import AnimatedListDemo from "@/registry/example/animated-list-demo"
 import { BentoCard, BentoGrid } from "@/registry/magicui/bento-grid"
@@ -87,21 +86,6 @@ const features = [
     className: "col-span-3 lg:col-span-2",
     background: (
       <AnimatedBeamMultipleOutputDemo className="absolute top-4 right-2 h-[300px] border-none [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)] transition-all duration-300 ease-out group-hover:scale-105" />
-    ),
-  },
-  {
-    Icon: CalendarIcon,
-    name: "Calendar",
-    description: "Use the calendar to filter your files by date.",
-    className: "col-span-3 lg:col-span-1",
-    href: "#",
-    cta: "Learn more",
-    background: (
-      <Calendar
-        mode="single"
-        selected={new Date(2022, 4, 11, 0, 0, 0)}
-        className="absolute top-10 right-0 origin-top scale-75 rounded-md border [mask-image:linear-gradient(to_top,transparent_40%,#000_100%)] transition-all duration-300 ease-out group-hover:scale-90"
-      />
     ),
   },
 ]
