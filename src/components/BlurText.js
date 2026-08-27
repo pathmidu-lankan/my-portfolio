@@ -14,9 +14,9 @@ export default function BlurText({ text = '' }) {
           transition={{
             duration: 0.6,
             delay: index * 0.15,
-            ease: 'easeOut',
+            ease: 'easeInOut',
           }}
-          className="text-4xl md:text-6xl font-extrabold text-white inline-block"
+          className="text-4xl md:text-6xl font-extrabold bg-gradient-to-r from-cyan-400 via-indigo-400 to-purple-500 bg-clip-text text-transparent inline-block pb-2"
         >
           {word}
         </motion.span>
