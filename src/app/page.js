@@ -1,4 +1,5 @@
 import Navbar from "@/components/Navbar";
+import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
 import BlurText from "@/components/BlurText";
@@ -17,6 +18,7 @@ export default function Home() {
             Welcome to my personal portfolio. I am learning Next.js and building modern web applications.
           </p>
         </div>
+        <Skills />
         <Projects />
         <Contact />
         <Footer />
