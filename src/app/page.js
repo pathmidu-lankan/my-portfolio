@@ -3,6 +3,7 @@ import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
 import BlurText from "@/components/BlurText";
 import ParticlesBackground from "@/components/ParticlesBackground";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
         </div>
         <Projects />
         <Contact />
+        <Footer />
       </div>
     </main>
   );
