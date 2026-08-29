@@ -1,56 +1,45 @@
-'use client';
-import { motion } from 'framer-motion';
-
-const projects = [
-  {
-    title: "Arduino 4WD Obstacle Avoiding Car",
-    description: "Built an autonomous robot car using HC-SR04 ultrasonic sensor and HW-130 motor driver to detect and dodge obstacles in real time.",
-    tags: ["Arduino", "C++", "Robotics", "Hardware"],
-    link: "#",
-  },
-  {
-    title: "Python Utility Scripts",
-    description: "Collection of automation tools and backend utility scripts built with Python for optimizing local developer workflows.",
-    tags: ["Python", "Automation", "Git"],
-    link: "#",
-  },
-];
-
 export default function Projects() {
+  const projects = [
+    {
+      title: "Arduino 4WD Obstacle Avoiding Car",
+      description: "Robotics system using HC-SR04 ultrasonic sensor & HW-130 driver to autonomously navigate around obstacles.",
+      tags: ["Arduino", "C++", "Sensors", "Hardware"],
+    },
+    {
+      title: "Python Utility Scripts",
+      description: "Custom scripts and algorithmic tools developed for data processing and quick tasks.",
+      tags: ["Python", "Algorithms", "Automation"],
+    },
+  ];
+
   return (
-    <section id="projects" className="my-16 w-full max-w-4xl px-4">
-      <h2 className="text-3xl font-bold text-center mb-8 text-white">
+    <section id="projects" className="py-16 px-6 max-w-5xl mx-auto">
+      <h2 className="text-2xl md:text-3xl font-bold text-center mb-10 text-slate-100">
         Featured Projects
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {projects.map((project, idx) => (
-          <motion.div
-            key={idx}
-            whileHover={{ y: -6, scale: 1.02 }}
-            transition={{ duration: 0.2 }}
-            className="bg-slate-800/60 backdrop-blur-md border border-slate-700/50 hover:border-cyan-500/50 rounded-xl p-6 shadow-lg hover:shadow-cyan-500/10 transition-all flex flex-col justify-between"
+
+      <div className="grid md:grid-cols-2 gap-6">
+        {projects.map((project, index) => (
+          <div
+            key={index}
+            className="p-6 rounded-2xl bg-slate-900/50 border border-slate-800/80 hover:border-amber-500/30 transition-all flex flex-col justify-between"
           >
             <div>
-              <h3 className="text-xl font-bold text-cyan-300 mb-2">
-                {project.title}
-              </h3>
-              <p className="text-slate-300 text-sm mb-4 leading-relaxed">
-                {project.description}
-              </p>
+              <h3 className="text-xl font-bold text-slate-100 mb-2">{project.title}</h3>
+              <p className="text-slate-400 text-sm leading-relaxed mb-6">{project.description}</p>
             </div>
-            <div>
-              <div className="flex flex-wrap gap-2 mb-4">
-                {project.tags.map((tag, i) => (
-                  <span
-                    key={i}
-                    className="text-xs px-2.5 py-1 rounded-full bg-slate-700/80 text-cyan-400 font-medium border border-cyan-500/20"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
+
+            <div className="flex flex-wrap gap-2">
+              {project.tags.map((tag, idx) => (
+                <span
+                  key={idx}
+                  className="px-3 py-1 text-xs font-medium bg-slate-800/80 text-amber-400 rounded-md border border-amber-500/10"
+                >
+                  {tag}
+                </span>
+              ))}
             </div>
-          </motion.div>
+          </div>
         ))}
       </div>
     </section>

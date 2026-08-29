@@ -1,10 +1,32 @@
+@tailwind base;
 @import "tailwindcss";
 
 :root {
-  --bg-color: #0b0f19;       /* Dark background */
-  --text-primary: #f3f4f6;   /* Main text color */
-  --accent-color: #6366f1;   /* Vibrant accent (Indigo) */
-  --card-bg: #1e293b;        /* Slate card background */
+  --background: #0f172a;
+  --foreground: #f8fafc;
+  
+  --primary: #14b8a6;
+  --primary-hover: #0d9488;
+  --secondary: #f59e0b;
+  
+  --card-bg: rgba(158, 167, 182, 0.5);
+  --border-color: rgba(51, 65, 85, 0.5);
+}
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #0f172a; /* Deep Slate */
+  --foreground: #f8fafc; /* Crisp White */
+  
+  /* Modern Accent Colors */
+  --primary: #0c7d70; /* Teal */
+  --primary-hover: #0d9488;
+  --secondary: #f59e0b; /* Amber */
+  
+  /* Subtle borders and cards */
+  --card-bg: rgba(158, 167, 182, 0.5); /* Slate 800 with opacity */
+  --border-color: rgba(51, 65, 85, 0.5); /* Slate 700 with opacity */
 }
 
 @theme inline {
